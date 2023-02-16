@@ -1,0 +1,194 @@
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  /*
+    2. Remove default margin and padding
+  */
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  /*
+    3. Allow percentage-based heights in the application
+  */
+  html, body {
+    height: 100%;
+  }
+  /*
+    Typographic tweaks!
+    4. Add accessible line-height
+    5. Improve text rendering
+  */
+  body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+  /*
+    6. Improve media defaults
+  */
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  /*
+    7. Remove built-in form typography styles
+  */
+  input, button, textarea, select {
+    font: inherit;
+  }
+  /*
+    8. Avoid text overflows
+  */
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+
+:root {
+    --color-orange: hsl(31, 77%, 52%);
+    --color-cyan: hsl(184, 100%, 22%);
+    --color-darkCyan: hsl(179, 100%, 13%);
+
+    --color-white: hsla(0, 0%, 100%, 0.75);
+    --color-gray: hsl(0, 0%, 95%);
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+    background-color: var(--color-gray);
+    font-family: 'Lexend Deca', sans-serif;
+
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0rem 1rem;
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+
+.sedan {
+    background-color: var(--color-orange);
+}
+
+.suv {
+    background-color: var(--color-cyan);
+}
+
+.luxury {
+    background-color: var(--color-darkCyan);
+}
+
+.car {
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+}
+
+h2 {
+    padding: 1rem 0rem;
+    color: var(--color-gray);
+    font-family: 'Big Shoulders Display', cursive;
+    font-weight: 700;
+}
+
+p {
+    color: var(--color-white);
+    font-weight: 400;
+}
+
+button {
+    border: none;
+    border-radius: 1rem;
+    padding: 0.4rem 0.5rem;
+    margin: 1rem 0rem;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+.sedan-btn {
+    color: var(--color-orange);
+}
+
+.suv-btn {
+    color: var(--color-cyan);
+}
+
+.luxury-btn {
+    color: var(--color-darkCyan);
+}
+
+@media (min-width: 800px) {
+    .container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        width: 70%;
+        height: 60vh;
+        border-radius: 0.5rem;
+        overflow: hidden;
+        margin: 0;
+    }
+
+    .car {
+        height: 100%;
+        width: 100%;
+        padding: 1rem;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        width: 70%;
+        height: 65vh;
+        border-radius: 0.5rem;
+        overflow: hidden;
+        margin: 0;
+    }
+
+    .car {
+        height: 100%;
+        width: 100%;
+        padding: 3rem;
+    }
+
+    h2 {
+        font-size: 3rem;
+        padding: 2rem 0rem;
+    }
+
+    p {
+        font-size: 1.2rem;
+    }
+
+    button {
+        font-size: 1rem;
+        border: none;
+        border-radius: 2rem;
+        padding: 1rem 2.5rem;
+        margin: 1rem 0rem;
+        width: 50%;
+    }
+}
+
+@media (min-width: 1600px) {
+    p {
+        margin-bottom: 4rem;
+    }
+}
+
